@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style/main.css">    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+    <header class="header" id="header">
+        <section class="header__element">
+            <section class="header__title"><h2>Technik Mechatronik</h2></section>
+            <button class="btn btn--back btn--smaller" onclick="location.href='index.html'">
+                Wróć
+            </button>
+        </section>
+        <hr class="header__underline">
+    </header>
+    <main class="main">
+        <section class="main__content">
+            <section class="main__element">
+                <form method="POST">
+                    <h2 class="main__title">Twoje oceny: </h2>
+                    
+                    <label class="label" for="grades-0">Język polski: </label>
+                    <input type="number" name="grades-0" min="2" max="6">
+
+                    <label class="label" for="grades-1">Matematyka: </label>
+                    <input type="number" name="grades-1" min="2" max="6">
+
+                    <label class="label" for="grades-2">Język obcy wiodący: </label>
+                    <input type="number" name="grades-2" min="2" max="6">
+
+                    <label class="label" for="grades-3">Fizyka: </label>
+                    <input type="number" name="grades-3" min="2" max="6">
+                    
+                    <button class="btn btn--down btn--smaller" type="submit" onclick="location.href='#achievements'">Następny dział</button>
+                </form>
+            </section>
+            <section class="main__element">
+                <form>
+                    <h2 class="main__title">Twoje wyniki z testu ósmoklasisty: </h2>
+                    
+                    <label class="label" for="test-0">Język polski: </label>
+                    <span class="input__parent">
+                        <input class="percentage" type="number" name="test-0" min="0" max="100">
+                    </span>
+
+                    <label class="label" for="test-1">Matematyka: </label>
+                        <input class="percentage" type="number" name="test-1" min="0" max="100">
+                    </span>
+
+                    <label class="label" for="test-2">Język obcy nowożytny na poziomie podstawowym: </label>
+                    <span class="input__parent">
+                        <input class="percentage" type="number" name="test-2" min="0" max="100">
+                    </span>
+
+                    <button type="submit" class="btn btn--down btn--smaller">Następny dział</button>
+                </form>
+            </section>
+            <section class="main__element main__element--bigger">
+                <form>
+                    <h2 class="main__title">Twoje osiągnięcia: </h2>
+                    
+                    <span class="label">Otrzymałem świadectwo z wyróżnieniem: </span>
+                    <section> 
+                        <input class="radio" type="radio" name="radio" value="7"> Tak </input> 
+                        <input class="radio" type="radio" name="radio" value="0" checked> Nie </input> 
+                    </section>
+
+                    <span class="label">
+                        Uzyskałem  w zawodach wiedzy będących konkursem o zasięgu ponadwojewódzkim organizowanym przez kuratorów oświaty na podstawie zawartych porozumień:  
+                    </span>
+                    <select name="achievements-0">
+                        <option value="0">
+                            Nie brałem/am udziału
+                        </option>
+                        <option value="10">
+                            Tytuł finalisty konkursu przedmiotowego
+                        </option>
+                        <option value="7">
+                            Tytuł laureata konkursu tematycznego lub interdyscyplinarnego
+                        </option>
+                        <option value="5">
+                            Tytuł finalisty konkursu tematycznego lub interdyscyplinarnego 
+                        </option>
+                    </select>
+
+                    <span class="label">
+                        Uzyskałem w zawodach wiedzy będących konkursem o zasięgu międzynarodowym lub ogólnopolskim albo turniejem o zasięgu ogólnopolskim, przeprowadzanymi zgodnie z przepisami wydanymi na podstawie art. 22 ust. 6 ustawy o systemie oświaty:  
+                    </span>
+                    <select name="achievements-1">
+                        <option value="0">
+                            Nie brałem/am udziału
+                        </option>
+                        <option value="10">
+                            Tytuł finalisty konkursu z przedmiotu lub przedmiotów artystycznych objętych ramowym planem nauczania szkoły artystycznej 
+                        </option>
+                        <option value="4">
+                            Tytuł laureata turnieju z przedmiotu lub przedmiotów artystycznych nieobjętych ramowym planem nauczania szkoły artystycznej 
+                        </option>
+                        <option value="3">
+                            Tytuł finalisty turnieju z przedmiotu lub przedmiotów artystycznych nieobjętych ramowym planem nauczania szkoły artystycznej 
+                        </option>
+                    </select>
+
+                    <span class="label">
+                        Uzyskałem w zawodach wiedzy będących konkursem o zasięgu wojewódzkim organizowanym przez kuratora oświaty:
+                    </span>
+                    <select name="achievements-2">
+                        <option value="0">
+                            Nie brałem/am udziału
+                        </option>
+                        <option value="10">
+                            Dwa lub więcej tytuły finalisty konkursu przedmiotowego 
+                        </option>
+                        <option value="7">
+                            Dwa lub więcej tytuły laureata konkursu tematycznego lub interdyscyplinarnego
+                        </option>
+                        <option value="5">
+                            Dwa lub więcej tytuły finalisty konkursu tematycznego lub interdyscyplinarnego
+                        </option>
+                        <option value="7">
+                            Tytuł finalisty konkursu przedmiotowego
+                        </option>
+                        <option value="3">
+                            Tytuł laureata konkursu tematycznego lub interdyscyplinarnego
+                        </option>
+                        <option value="2">
+                            Tytuł finalisty konkursu tematycznego lub interdyscyplinarnego
+                        </option>
+                    </select>
+
+                    <span class="label">
+                        Uzyskanie w zawodach wiedzy będących konkursem albo turniejem, o zasięgu ponadwojewódzkim lub wojewódzkim, przeprowadzanymi zgodnie z przepisami wydanymi na podstawie art. 22 ust. 6 ustawy o systemie oświaty:  
+                    </span>
+                    <select name="achievements-3">
+                        <option value="0">
+                            Nie brałem/am udziału
+                        </option>
+                        <option value="10">
+                            Dwa lub więcej tytuły finalisty konkursu z przedmiotu lub przedmiotów artystycznych objętych ramowym planem nauczania szkoły artystycznej
+                        </option>
+                        <option value="7">
+                            Dwa lub więcej tytuły laureata turnieju z przedmiotu lub przedmiotów artystycznych nieobjętych ramowym planem nauczania szkoły artystycznej
+                        </option>
+                        <option value="5">
+                            Dwa lub więcej tytuły finalisty turnieju z przedmiotu lub przedmiotów artystycznych nieobjętych ramowym planem nauczania szkoły artystycznej
+                        </option>
+                        <option value="7">
+                            Tytuł finalisty konkursu z przedmiotu lub przedmiotów artystycznych objętych ramowym planem nauczania szkoły artystycznej
+                        </option>
+                        <option value="3">
+                            Tytuł laureata turnieju z przedmiotu lub przedmiotów artystycznych nieobjętych ramowym planem nauczania szkoły artystycznej
+                        </option>
+                        <option value="2">
+                            Tytuł finalisty turnieju z przedmiotu lub przedmiotów artystycznych nieobjętych ramowym planem nauczania szkoły artystycznej
+                        </option>
+                    </select>
+                    
+                    <span class="label">
+                        Uzyskałem  wysokiego miejsca w zawodach wiedzy innych niż wymienione wyżej, artystycznych lub sportowych, organizowanych przez kuratora oświaty lub inne podmioty działające na terenie szkoły, na szczeblu:  
+                    </span>
+                    <select name="achievements-4">
+                        <option value="0">
+                            Nie brałem/am udziału
+                        </option>
+                        <option value="4">
+                            Międzynarodowym
+                        </option>
+                        <option value="3">
+                            Krajowym
+                        </option>
+                        <option value="2">
+                            Wojewódzkim
+                        </option>
+                        <option value="1">
+                            Powiatowym
+                        </option>
+                    </select>
+                    
+                    <input class="radio" type="checkbox" name="achievements-5" value="3">Osiągnięcia w zakresie aktywności społecznej, w tym na rzecz środowiska szkolnego, w szczególności w formie wolontariatu</input>
+                    
+                    <button type="submit" class="btn btn--down btn--smaller">Podlicz</button>
+                </form>
+            </section>
+            <section class="main__element main__element--summary">
+                <h2> Zdobyłeś/aś </h2>                      
+                <h1 id="score">0 /200</h1>
+                <h2> punktów </h2>
+
+                <button class="btn" onclick="window.location.href='#header'">Powtórz test</button>
+                <button class="btn" onclick="location.href='index.html'">Strona główna</button>
+            </section>
+        </section>
+        <button class="btn btn--top" style="display: none;" id="topBtn" onclick="window.location.href='#header'">Wróć do góry</button>
+    </main>
+    <footer>
+        @Szymon Paluch 3infB
+    </footer>
+        
+    <script src="js/inputEnforcer.js"></script>
+    <script src="js/btnVisibility.js"></script>
+    <script src="js/submit.js"></script>
+</body>
+</html>

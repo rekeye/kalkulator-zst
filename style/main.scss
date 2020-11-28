@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&display=swap');
+
+@mixin absolute($top, $right, $bottom, $left) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+$green: rgb(0, 34, 3);
+$dark: rgb(19, 19, 19);
+$light: rgb(216, 216, 216);
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    transition-property: all;
+    transition-duration: .4s;
+    transition-timing-function: ease;
+    text-align: center;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    background-color: $light;
+    font-family: 'Roboto', sans-serif;
+    color: $dark;
+    overflow: hidden; 
+}
+h1 {
+    font-size: calc(1.8em + 0.5vw);
+    font-family: 'Raleway', sans-serif;
+}
+h2 {
+    font-size: calc(1.2em + 0.5vw);
+    font-family: 'Raleway', sans-serif;
+}
+.header {
+    height: 11vh;
+    width: 99.2vw;
+    padding: 0.4rem 1.8rem 0.4rem 1.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    &__element {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title {
+        margin-left: 3.2rem;
+        display: inline-block;
+    }
+    &__underline {
+        width: 90%;
+        border: 2px solid $green;
+    }
+}
+.main {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &:before {
+        content: url(../img/logo.png);
+        opacity: 0.1;
+        position: absolute;
+        top: -160px;
+        left: -220px;
+        z-index: -10;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &__element {
+        height: 46vh;
+        width: 25rem;
+        margin: 22vh 0 20vh 0;
+        padding: 1rem;
+        background: $light;
+        border: 1px solid currentColor;
+        &--bigger {
+            margin: 16vh 0 16vh 0;
+            height: 86vh;
+            width: 60rem;
+        }
+        &--summary {
+            height: 44vh;
+            margin-bottom: 24vh;
+        }
+    }
+}
+.btn {
+    height: 4rem;
+    width: 20rem;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 1rem auto;
+    border: 1px solid currentColor;
+    background: transparent;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.3em;
+    &:before {
+        content: '';
+        @include absolute(0,0,0,0);
+        background: $green;
+        transform: translateX(-100%);
+        z-index: -1;
+    }
+    &:hover, &:target {
+        color: $light;
+        &:before {
+            transform: translateX(0);
+        }
+    }
+    &--smaller {
+        height: 3.1rem;
+        width: 14rem;
+    }
+    &--back {
+        display: inline-block;
+        margin-right: 3rem;
+        &:before {
+            transform: translateX(100%);
+        }
+        &:hover &:before {
+            transform: translateX(0);
+        }
+    }
+    &--down {
+        margin-top: 1.6rem;
+        &:before {
+            transform: translateY(-100%);
+        }
+        &:hover &:before {
+            transform: translateY(0);
+        }
+    }
+    &--top {
+        position: fixed;
+        bottom: 1.4rem;
+        right: 6rem;
+        &:before {
+            transform: translateY(100%);
+        }
+        &:hover &:before {
+            transform: translateY(0);
+        }
+    }
+}
+input {
+    height: 2rem;
+    background: $light;
+    border: 1px solid currentColor;
+    display: block;
+    font-size: 1.1em;
+}
+input[type="number"] {
+    width: 100%;
+}
+input[type="radio"], input[type="checkbox"] {
+    display: inline-block;
+}
+.label {
+    padding: 0.2rem;
+    text-align: left;
+    font-size: 1.2em;
+    display: block;
+}
+select {
+    height: 2rem;
+    width: 99%;
+    margin: 0.2rem;
+    font-size: 1.1em;
+    background: transparent;
+}
+.radio {
+    font-size: 1.2em;
+    vertical-align: middle;
+    padding: 0.1rem;
+}
+footer {
+    padding: 1vh;
+}
