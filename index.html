@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="style/main.css">    
+    <link rel="stylesheet" href="style/main.css">  
+    <script src="js/pageLinkSend.js"></script>  
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 <body>
     <header class="header">
@@ -14,22 +16,26 @@
     </header>
     <main class="main">
             <h1 class="main__title">Jaki kierunek Cię interesuje?</h1>
-            <button class="btn" onclick="location.href='inf.html'">
+            <button class="btn" id="inf">
                 Technik Informatyk
             </button>
-            <button class="btn" onclick="location.href='geo.html'">
+            <button class="btn" id="geo">
                 Technik Geodeta
             </button>
-            <button class="btn" onclick="location.href='eko.html'">
+            <button class="btn" id="eko">
                 Technik Ekonomista
             </button>
-            <button class="btn" onclick="location.href='uiseo.html'">
+            <button class="btn" id="uiseo">
                 Technik UiSEO
             </button>
-            <button class="btn" onclick="location.href='mech.html'">
+            <button class="btn" id="mech">
                 Technik Mechatronik
             </button>
     </main>
+    <script>
+        document.querySelectorAll('button')
+                .forEach(el => el.addEventListener('click', pageLinkSend))
+    </script>
     <footer>
         @Szymon Paluch 3infB
     </footer>

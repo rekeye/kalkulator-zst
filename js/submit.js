@@ -46,10 +46,9 @@ const submit = (e) => {
                 'test': test
             },
             cache:false,
-            success: (html) => {
-                console.log('data sent')
-                console.log('data received: ', html)
-            $('#score').html(`${html} /200`);
+            success: (response) => {
+                console.log('data received: ', response)
+                $('#score').html(`${response} /200`);
             }
         });
 
