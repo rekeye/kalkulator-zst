@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ZST Bytom</title>
+    <link rel="icon" type="image/png" href="img/logo.png">
 
     <link rel="stylesheet" href="style/main.css">
     <script src="js/pageLinkGet.js"></script>  
@@ -41,7 +42,7 @@
             </section>
             <section class="main__element">
                 <form>
-                    <h2 class="main__title">Twoje wyniki z testu ósmoklasisty: </h2>
+                    <h2 class="main__title">Twoje wyniki z testu ósmoklasisty w procentach: </h2>
                     
                     <label class="label" for="test-0">Język polski: </label>
                     <span class="input__parent">
@@ -64,11 +65,17 @@
                 <form>
                     <h2 class="main__title">Twoje osiągnięcia: </h2>
                     
-                    <span class="label">Otrzymałem świadectwo z wyróżnieniem: </span>
-                    <section> 
-                        <input class="radio" type="radio" name="radio" value="7"> Tak </input> 
-                        <input class="radio" type="radio" name="radio" value="0" checked> Nie </input> 
-                    </section>
+                    <span class="label label--radio">Otrzymałem świadectwo z wyróżnieniem: </span>
+                    <span class="label label--radio">
+                    <label class="radio"> Tak 
+                        <input class="radio__default" type="radio" name="radio" value="7"> 
+                        <span class="radio__custom"></span>
+                    </label>
+                    <label class="radio"> Nie 
+                        <input class="radio__default" type="radio" name="radio" value="0" checked>
+                        <spann class="radio__custom"></spann>
+                    </label>
+                </span>
 
                     <span class="label">
                         Uzyskałem  w zawodach wiedzy będących konkursem o zasięgu ponadwojewódzkim organizowanym przez kuratorów oświaty na podstawie zawartych porozumień:  
@@ -181,7 +188,10 @@
                         </option>
                     </select>
                     
-                    <input class="radio" type="checkbox" name="achievements-5" value="3">Osiągnięcia w zakresie aktywności społecznej, w tym na rzecz środowiska szkolnego, w szczególności w formie wolontariatu</input>
+                    <label class="radio radio--checkbox"> Osiągnięcia w zakresie aktywności społecznej, w tym na rzecz środowiska szkolnego, w szczególności w formie wolontariatu
+                        <input class="radio__default" type="checkbox" name="achievements-5" value="3">
+                        <span class="radio__custom radio__custom--checkbox"></span>
+                    </label>
                     
                     <button type="submit" class="btn btn--down btn--smaller">Podlicz</button>
                 </form>

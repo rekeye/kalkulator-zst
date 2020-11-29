@@ -117,7 +117,7 @@ h2 {
 }
 
 .main__element {
-  height: 46vh;
+  height: 47vh;
   width: 25rem;
   margin: 22vh 0 20vh 0;
   padding: 1rem;
@@ -127,7 +127,7 @@ h2 {
 
 .main__element--bigger {
   margin: 16vh 0 16vh 0;
-  height: 86vh;
+  height: 85.5vh;
   width: 60rem;
 }
 
@@ -239,10 +239,18 @@ input[type="radio"], input[type="checkbox"] {
 }
 
 .label {
+  margin: 0.2rem 0 0.2rem 0;
   padding: 0.2rem;
   text-align: left;
   font-size: 1.2em;
   display: block;
+}
+
+.label--radio {
+  display: inline-block;
+  padding: 0;
+  width: 49.7%;
+  text-align: left;
 }
 
 select {
@@ -250,13 +258,85 @@ select {
   width: 99%;
   margin: 0.2rem;
   font-size: 1.1em;
-  background: transparent;
+  border: 1px solid #002203;
+  border-radius: 5px;
+  background: #c9c9c9;
+  color: #131313;
 }
 
 .radio {
-  font-size: 1.2em;
-  vertical-align: middle;
-  padding: 0.1rem;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding-left: 25px;
+  margin: 0.3rem 20px 0 0;
+}
+
+.radio--checkbox {
+  padding-left: 25px;
+  margin: 1.5rem 0 0 0;
+}
+
+.radio__default {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.radio__default:checked ~ .radio__custom:after {
+  display: block;
+}
+
+.radio__custom {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 20px;
+  width: 20px;
+  background: #c9c9c9;
+  border: 1px solid #535353;
+  border-radius: 50%;
+}
+
+.radio__custom:after {
+  content: "";
+  display: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #535353;
+}
+
+.radio__custom--checkbox {
+  border-radius: 0;
+}
+
+.radio__custom--checkbox:after {
+  width: 5px;
+  height: 10px;
+  border: solid #535353;
+  border-radius: 0;
+  background: #d8d8d8;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 footer {
