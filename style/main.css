@@ -36,7 +36,7 @@ h2 {
 }
 
 .header {
-  height: 11vh;
+  height: 11.5vh;
   width: 99.2vw;
   padding: 0.4rem 1.8rem 0.4rem 1.8rem;
   display: -webkit-box;
@@ -75,7 +75,7 @@ h2 {
 }
 
 .main {
-  min-height: 85vh;
+  min-height: 84.5vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,7 +137,7 @@ h2 {
 }
 
 .btn {
-  height: 4rem;
+  height: 3.3rem;
   width: 20rem;
   position: relative;
   display: block;
