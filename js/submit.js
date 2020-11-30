@@ -54,12 +54,6 @@ const submit = (e) => {
 
     window.scrollBy({
         top: document.documentElement.clientHeight,
-        left: 0,
         behavior: 'smooth'
     })
 }
-
-document.querySelectorAll('button.btn--down')
-        .forEach(btn => {
-            btn.addEventListener('click', submit);
-        });

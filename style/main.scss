@@ -84,19 +84,16 @@ h2 {
         justify-content: center;
     }
     &__element {
-        height: 47vh;
         width: 25rem;
-        margin: 22vh 0 20vh 0;
+        margin: 21vh 0 20vh 0;
         padding: 1rem;
         background: $light;
         border: 1px solid currentColor;
         &--bigger {
             margin: 16vh 0 16vh 0;
-            height: 85.5vh;
             width: 60rem;
         }
         &--summary {
-            height: 44vh;
             margin-bottom: 24vh;
         }
     }
@@ -109,7 +106,7 @@ h2 {
     overflow: hidden;
     margin: 1rem auto;
     border: 1px solid currentColor;
-    background: transparent;
+    background: $light;
     cursor: pointer;
     z-index: 10;
     font-size: 1.3em;

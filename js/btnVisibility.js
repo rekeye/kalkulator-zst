@@ -7,8 +7,3 @@ const topBtnVisibility = (position) => {
         topBtn.style.display = 'none';
     }
 }
-
-window.addEventListener('scroll', (e) => {
-    scroll_position = window.scrollY;
-    topBtnVisibility(scroll_position);
-});

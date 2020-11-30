@@ -7,8 +7,12 @@
     <link rel="icon" type="image/png" href="img/logo.png">
 
     <link rel="stylesheet" href="style/main.css">
-    <script src="js/pageLinkGet.js"></script>  
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script src="js/pageLinkGet.js"></script>  
+    <script src="js/inputEnforcer.js"></script>
+    <script src="js/btnVisibility.js"></script>
+    <script src="js/submit.js"></script>
 </head>
 <body onload="pageLinkGet()">
     <header class="header" id="header">
@@ -211,8 +215,16 @@
         @Szymon Paluch 3infB
     </footer>
         
-    <script src="js/inputEnforcer.js"></script>
-    <script src="js/btnVisibility.js"></script>
-    <script src="js/submit.js"></script>
+    <script>
+        document.querySelectorAll('button.btn--down')
+                .forEach(btn => {
+                    btn.addEventListener('click', submit);
+                });
+
+        window.addEventListener('scroll', (e) => {
+            scroll_position = window.scrollY;
+            topBtnVisibility(scroll_position);
+        });
+    </script>
 </body>
 </html>
