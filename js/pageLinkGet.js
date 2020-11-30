@@ -1,4 +1,5 @@
 const pageLinkGet = () => {
+    //zdobycie informacji do wyswietlenia na stronie bazujac na wczesniej wyslanych informacjach
     $.ajax({
         type:"get",
         url:"php/whichPageGet.php",

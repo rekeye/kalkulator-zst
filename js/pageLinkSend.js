@@ -1,7 +1,7 @@
 const pageLinkSend = (e) => {
     const btn = e.target;
 
-    $.ajax({ //wyslanie danych do php za pomoca ajax
+    $.ajax({ //wyslanie danych do php za pomoca ajax bazujac na klikniety link
         type:"post",
         url:"php/whichPageSend.php",
         data: {  
